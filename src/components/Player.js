@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 // number, then a "player not found" message is displayed.
 const Player = (props) => {
   const player = PlayerAPI.get(
-    parseInt(props.match.params.number, 10)
+    // 当路由与路径匹配时，match对象会被作为prop传入要渲染的组件
+    parseInt(props.match.params.number, 10) // 将字符串转换为数字，第二个参数是进制数
   )
   if (!player) {
     return <div>Sorry, but the player was not found</div>

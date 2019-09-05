@@ -8,6 +8,7 @@ const FullRoster = () => (
   <div>
     <ul>
       {
+        // 将api.js中的players数据渲染进列表
         PlayerAPI.all().map(p => (
           <li key={p.number}>
             <Link to={`/roster/${p.number}`}>{p.name}</Link>

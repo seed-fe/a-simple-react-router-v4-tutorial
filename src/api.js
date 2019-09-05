@@ -12,7 +12,9 @@ const PlayerAPI = {
   ],
   all: function() { return this.players},
   get: function(id) {
+    // isPlayer这里作为find方法的测试函数
     const isPlayer = p => p.number === id
+    //  find() 方法返回数组中满足提供的测试函数的第一个元素的值。
     return this.players.find(isPlayer)
   }
 }
